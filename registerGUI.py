@@ -101,7 +101,7 @@ def mfileopen():
    print(file1)
    newPath = shutil.copy(file1, 'temp/1.png')
    image=Image.open('temp/1.png')
-   image = image.resize((500,500), Image.ANTIALIAS)
+   image = image.resize((500,500), Image.LANCZOS)
    photo=ImageTk.PhotoImage(image)
    photo_label=Label(image=photo,width=500,height=500).place(x=740,y=140).pack()
    label_ = Label(root, text=file1,width=70,font=("bold", 8))
